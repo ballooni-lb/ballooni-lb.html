@@ -1,0 +1,1330 @@
+:root {
+  --green: #a8d637;
+  --pink: #e92a8b;
+  --navy: #18374b;
+  --blue: #6cbbef;
+  --yellow: #ffd22f;
+  --cream: #fffaf0;
+  --ink: #264358;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "Nunito", sans-serif;
+}
+
+.site-header {
+  min-height: 92px;
+  padding: 12px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.logo-link img {
+  display: block;
+  width: 156px;
+  height: 66px;
+  object-fit: contain;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: .95rem;
+  font-weight: 800;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation a:not(.nav-button):hover,
+.text-link:hover {
+  color: var(--pink);
+}
+
+.nav-button,
+.button {
+  display: inline-block;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.nav-button {
+  padding: 12px 18px;
+  color: #fff;
+  background: var(--pink);
+}
+
+.button {
+  padding: 15px 27px;
+  color: #fff;
+  box-shadow: 0 8px 0 rgba(24, 55, 75, .15);
+}
+
+.button:hover,
+.nav-button:hover {
+  transform: translateY(-3px);
+}
+
+.button-pink {
+  background: var(--pink);
+}
+
+.button-green {
+  background: #7eba2d;
+}
+
+.hero {
+  overflow: hidden;
+  min-height: 520px;
+  padding: 72px 11% 55px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(115deg, #fffdf7 0%, #fff4cc 100%);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  margin: 0 0 11px;
+  color: var(--pink);
+  letter-spacing: 1.6px;
+  font-size: .74rem;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Baloo 2", sans-serif;
+  line-height: 1.02;
+  margin: 0;
+  color: var(--navy);
+}
+
+h1 {
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: var(--pink);
+}
+
+.hero-text {
+  max-width: 545px;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 22px 0 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.text-link {
+  font-weight: 900;
+}
+
+.text-link span {
+  color: var(--pink);
+  font-size: 1.4rem;
+}
+
+.hero-art {
+  min-height: 335px;
+  position: relative;
+}
+
+.balloon {
+  position: absolute;
+  border-radius: 50% 50% 48% 48%;
+  box-shadow: inset -15px -15px 20px rgba(0, 0, 0, .09), inset 12px 12px 13px rgba(255, 255, 255, .6);
+}
+
+.balloon:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  left: calc(50% - 6px);
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.balloon:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 110px;
+  top: 100%;
+  left: 50%;
+  background: #a9937c;
+}
+
+.balloon-green {
+  width: 163px;
+  height: 197px;
+  top: 44px;
+  left: 0;
+  background: var(--green);
+}
+
+.balloon-blue {
+  width: 174px;
+  height: 210px;
+  top: 0;
+  left: 130px;
+  background: var(--blue);
+}
+
+.balloon-yellow {
+  width: 135px;
+  height: 165px;
+  top: 112px;
+  left: 255px;
+  background: var(--yellow);
+}
+
+.balloon-pink {
+  width: 112px;
+  height: 138px;
+  top: 38px;
+  left: 365px;
+  background: #f28bbd;
+}
+
+.hero-art p {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  transform: rotate(-9deg);
+  color: var(--pink);
+  font: 800 2.5rem/1 "Baloo 2", sans-serif;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 28px;
+  border-radius: 10px;
+  background: var(--pink);
+  transform: rotate(30deg);
+}
+
+.one {
+  left: 220px;
+  top: 20px;
+}
+
+.two {
+  right: 55px;
+  top: 2px;
+  background: var(--green);
+  transform: rotate(-25deg);
+}
+
+.three {
+  right: 12px;
+  top: 190px;
+  background: var(--blue);
+}
+
+.section {
+  padding: 88px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 42px;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-size: clamp(2.35rem, 4.5vw, 3.7rem);
+}
+
+.section-heading>p:last-child {
+  line-height: 1.6;
+  margin: 13px 0 0;
+}
+
+.occasion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1120px;
+  margin: auto;
+}
+
+.occasion-card {
+  min-height: 295px;
+  padding: 35px 31px;
+  border-radius: 28px;
+  transition: transform .2s;
+}
+
+.occasion-card:hover {
+  transform: translateY(-8px);
+}
+
+.birthday {
+  background: #ffe4ef;
+}
+
+.wedding {
+  background: #e9f7d2;
+}
+
+.events {
+  background: #dff3ff;
+}
+
+.occasion-icon {
+  display: grid;
+  place-items: center;
+  width: 57px;
+  height: 57px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 1.7rem;
+}
+
+.occasion-card h3 {
+  font-size: 2rem;
+}
+
+.occasion-card p {
+  line-height: 1.55;
+}
+
+.occasion-card a {
+  font-weight: 900;
+  color: var(--pink);
+}
+
+.gallery {
+  background: #fff;
+}
+
+.photo-grid {
+  max-width: 1120px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr 1fr;
+  grid-template-rows: 205px 205px;
+  gap: 18px;
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed rgba(24, 55, 75, .3);
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  color: rgba(24, 55, 75, .55);
+  font-size: .72rem;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.photo-one {
+  grid-row: span 2;
+  background: #ffe7b9;
+}
+
+.photo-two {
+  background: #e3f5c3;
+}
+
+.photo-three {
+  background: #d7efff;
+}
+
+.photo-four {
+  grid-column: span 2;
+  background: #f9dce9;
+}
+
+.about {
+  padding: 77px 12%;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  align-items: center;
+  gap: 38px;
+  color: #fff;
+  background: var(--pink);
+}
+
+.about h2 {
+  color: #fff;
+}
+
+.about .eyebrow {
+  color: #ffe365;
+}
+
+.about>p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.04rem;
+}
+
+.about-bubble {
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--pink);
+  background: #fff;
+  font-size: 2rem;
+}
+
+.contact {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(130deg, #effbdc, #d8f2ff);
+}
+
+.contact>p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 15px auto 29px;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 27px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #fff;
+  background: var(--navy);
+  font-size: .86rem;
+}
+
+footer img {
+  width: 105px;
+  height: 44px;
+  object-fit: contain;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width:800px) {
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  .navigation {
+    gap: 12px;
+    font-size: .78rem;
+  }
+
+  .navigation a:not(.nav-button) {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 62px 8% 37px;
+  }
+
+  .hero-art {
+    margin: 24px auto 0;
+    width: 500px;
+    max-width: 100%;
+    transform: scale(.86);
+    transform-origin: top left;
+    min-height: 285px;
+  }
+
+  .occasion-grid {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+
+  .about {
+    grid-template-columns: 75px 1fr;
+    padding: 55px 9%;
+  }
+
+  .about>p {
+    grid-column: 1 / -1;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px 190px 190px;
+  }
+
+  .photo-one {
+    grid-row: span 1;
+  }
+
+  .photo-four {
+    grid-column: span 2;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:470px) {
+  .logo-link img {
+    width: 128px;
+  }
+
+  .nav-button {
+    padding: 10px 13px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section {
+    padding: 63px 6%;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 170px 170px 170px 170px;
+  }
+
+  .photo-four {
+    grid-column: span 1;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about>p {
+    grid-column: auto;
+  }
+
+  .about-bubble {
+    width: 68px;
+    height: 68px;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.photo-placeholder {
+  min-height: 235px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 235px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Fix the gallery: all photo boxes stay separate */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo-placeholder {
+  min-height: 235px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Cancel the old big-box settings */
+.photo-one,
+.photo-two,
+.photo-three,
+.photo-four,
+.photo-five,
+.photo-six,
+.photo-seven,
+.photo-eight,
+.photo-nine {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 235px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tablet: 2 photos per row */
+@media (max-width: 800px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Phone: 1 photo per row */
+@media (max-width: 470px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.photo-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: auto !important;
+  gap: 18px !important;
+}
+
+.photo-placeholder {
+  min-height: 235px !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  overflow: hidden !important;
+}
+
+.photo-placeholder img {
+  width: 100% !important;
+  height: 235px !important;
+  object-fit: cover !important;
+}
+
+.contact-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(24, 55, 75, 0.55);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-popup:target {
+  display: flex;
+}
+
+.popup-box {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 38px 30px 30px;
+  border-radius: 25px;
+  text-align: center;
+  color: #264358;
+  background: #fffaf0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.popup-title {
+  margin: 0 0 10px;
+  color: #e92a8b;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.popup-link {
+  display: block;
+  margin-top: 13px;
+  padding: 13px;
+  border-radius: 14px;
+  color: white;
+  background: #a8d637;
+  font-weight: bold;
+}
+
+.popup-link:last-child {
+  background: #e92a8b;
+}
+
+.close-popup {
+  position: absolute;
+  top: 9px;
+  right: 17px;
+  color: #e92a8b;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  height: 280px;
+}
+
+.photo-placeholder img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover !important;
+}
+
+.gallery-category {
+  max-width: 1120px;
+  margin: 0 auto 60px;
+}
+
+.gallery-category h3 {
+  margin-bottom: 18px;
+  font-size: 32px;
+  color: #18374b;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.photo-placeholder {
+  height: 250px;
+  overflow: hidden;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  padding: 0 !important;
+  border: none !important;
+  background: #f5f5f5;
+  box-shadow: 0 8px 20px rgba(24, 55, 75, 0.12);
+}
+
+.photo-placeholder img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover !important;
+  border-radius: 18px;
+}
+
+/* Nice coloured frames around the photos */
+.birthday-gallery .photo-placeholder {
+  border: 5px solid white !important;
+  outline: 3px solid #ffd22f;
+  box-shadow: 0 10px 24px rgba(255, 210, 47, 0.35);
+}
+
+.wedding-gallery .photo-placeholder {
+  border: 5px solid white !important;
+  outline: 3px solid #e92a8b;
+  box-shadow: 0 10px 24px rgba(233, 42, 139, 0.28);
+}
+
+.events-gallery .photo-placeholder {
+  border: 5px solid white !important;
+  outline: 3px solid #6cbbef;
+  box-shadow: 0 10px 24px rgba(108, 187, 239, 0.3);
+}
+
+.photo-placeholder,
+.photo-placeholder img {
+  border-radius: 22px;
+}
+
+@media (max-width: 800px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .photo-placeholder {
+    height: 180px;
+  }
+}
+
+.photo-placeholder {
+  height: auto !important;
+  aspect-ratio: 4 / 3;
+  padding: 8px !important;
+  background: white;
+  border: 4px solid #ffd22f !important;
+  border-radius: 22px;
+}
+
+.photo-placeholder img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 15px;
+}
+
+/* The frame follows the real image size */
+.photo-placeholder {
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.photo-placeholder img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: contain !important;
+  border: 5px solid #ffd22f !important;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(255, 210, 47, 0.3);
+}
+
+/* Different frame colours for each category */
+.wedding-gallery .photo-placeholder img {
+  border-color: #e92a8b !important;
+  box-shadow: 0 10px 24px rgba(233, 42, 139, 0.25);
+}
+
+.events-gallery .photo-placeholder img {
+  border-color: #6cbbef !important;
+  box-shadow: 0 10px 24px rgba(108, 187, 239, 0.25);
+}
+
+.photo-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 300px)) !important;
+  justify-content: center;
+  gap: 25px;
+}
+
+.photo-placeholder {
+  width: 100%;
+  max-width: 300px;
+}
+
+.photo-placeholder img {
+  width: 100% !important;
+  max-width: 300px;
+  height: auto !important;
+}
+
+.gallery-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 950px;
+  margin: auto;
+  gap: 22px;
+}
+
+.gallery-card {
+  padding: 35px 20px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(24, 55, 75, 0.12);
+  transition: transform 0.2s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-card span {
+  font-size: 42px;
+}
+
+.gallery-card h3 {
+  margin: 12px 0 5px;
+  font-size: 28px;
+}
+
+.gallery-card p {
+  margin: 0;
+}
+
+.birthday-card {
+  background: #fff0b9;
+}
+
+.wedding-card {
+  background: #ffe2f0;
+}
+
+.event-card {
+  background: #dff3ff;
+}
+
+.gallery-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 25px;
+  background: rgba(24, 55, 75, 0.65);
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-popup:target {
+  display: flex;
+}
+
+.gallery-popup-box {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 38px 30px 30px;
+  border-radius: 28px;
+  background: white;
+}
+
+.gallery-popup-box h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.popup-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.popup-photo-grid img,
+.popup-empty {
+  width: 100%;
+  height: 260px;
+  border-radius: 18px;
+}
+
+.popup-photo-grid img {
+  object-fit: contain;
+  background: #fffaf0;
+  border: 4px solid #e92a8b;
+  padding: 5px;
+}
+
+.popup-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #b8c6d0;
+  color: #70879a;
+}
+
+@media (max-width: 650px) {
+
+  .gallery-menu,
+  .popup-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.popup-photo-grid {
+  align-items: start;
+}
+
+.popup-photo-grid img {
+  width: auto !important;
+  max-width: 100%;
+  height: 260px !important;
+  margin: auto;
+  display: block;
+  object-fit: contain !important;
+  border: 4px solid #e92a8b;
+  border-radius: 18px;
+  background: white;
+}
+
+/* ===== Mobile Responsive ===== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   FINAL MOBILE FIX
+   ========================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  /* Header */
+  .site-header {
+    min-height: 75px;
+    padding: 10px 18px;
+  }
+
+  .logo-link img {
+    width: 125px;
+    height: auto;
+  }
+
+  .navigation {
+    gap: 8px;
+  }
+
+  .navigation a:not(.nav-button) {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding: 45px 22px 20px;
+    display: block;
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  /* IMPORTANT:
+     Remove the forced line break behavior on mobile */
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 43px;
+    line-height: 0.98;
+    letter-spacing: -0.5px;
+    overflow-wrap: break-word;
+  }
+
+  .hero h1 br {
+    display: none;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 20px 0 25px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .button {
+    padding: 14px 25px;
+  }
+
+  /* BALLOONS */
+  .hero-art {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    min-height: 300px;
+    margin: 20px 0 0;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .balloon-green {
+    width: 120px;
+    height: 150px;
+    left: 0;
+    top: 55px;
+  }
+
+  .balloon-blue {
+    width: 130px;
+    height: 160px;
+    left: 85px;
+    top: 15px;
+  }
+
+  .balloon-yellow {
+    width: 105px;
+    height: 130px;
+    left: 175px;
+    top: 105px;
+  }
+
+  .balloon-pink {
+    width: 90px;
+    height: 110px;
+    left: 255px;
+    top: 45px;
+  }
+
+  .hero-art p {
+    right: 5px;
+    bottom: 10px;
+    font-size: 32px;
+  }
+
+  .one {
+    left: 145px;
+    top: 25px;
+  }
+
+  .two {
+    right: 35px;
+    top: 20px;
+  }
+
+  .three {
+    right: 5px;
+    top: 180px;
+  }
+
+  /* OCCASIONS */
+  .section {
+    width: 100%;
+    padding: 60px 20px;
+  }
+
+  .section-heading {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-heading h2,
+  .about h2,
+  .contact h2 {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .occasion-grid {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .occasion-card {
+    width: 100%;
+    min-height: auto;
+    padding: 28px 24px;
+  }
+
+  /* GALLERY */
+  .gallery-menu {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-card {
+    width: 100%;
+  }
+
+  /* ABOUT */
+  .about {
+    width: 100%;
+    padding: 55px 22px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about>p {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* POPUPS */
+  .gallery-popup {
+    padding: 15px;
+  }
+
+  .gallery-popup-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 35px 18px 20px;
+  }
+
+  .popup-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-photo-grid img {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  /* FOOTER */
+  footer {
+    width: 100%;
+    padding: 25px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Extra-small phones */
+@media (max-width: 400px) {
+
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-art {
+    height: 275px;
+    min-height: 275px;
+  }
+
+  .balloon-green {
+    width: 105px;
+    height: 135px;
+  }
+
+  .balloon-blue {
+    width: 115px;
+    height: 145px;
+    left: 72px;
+  }
+
+  .balloon-yellow {
+    width: 95px;
+    height: 120px;
+    left: 155px;
+  }
+
+  .balloon-pink {
+    width: 80px;
+    height: 100px;
+    left: 235px;
+  }
+}
+
+.gallery-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.gallery-popup:target {
+  display: flex;
+}
+
+.gallery-popup-box {
+  position: relative;
+  width: min(920px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 26px;
+  border-radius: 18px;
+  background: white;
+}
+
+.popup-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.popup-photo-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
