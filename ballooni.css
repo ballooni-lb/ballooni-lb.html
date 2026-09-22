@@ -1328,3 +1328,38 @@ img {
   object-fit: cover;
   border-radius: 10px;
 }
+
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.image-lightbox.show {
+  display: flex;
+}
+
+.image-lightbox img {
+  display: block;
+  max-width: 95vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+}

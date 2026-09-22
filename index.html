@@ -230,5 +230,42 @@
     </a>
   </div>
 </div>
+<div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+  <button type="button" class="image-lightbox-close" aria-label="Close image">×</button>
+  <img id="image-lightbox-photo" src="" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("image-lightbox");
+  const lightboxPhoto = document.getElementById("image-lightbox-photo");
+  const closeLightbox = document.querySelector(".image-lightbox-close");
+
+  document.querySelectorAll(".popup-photo-grid img").forEach((photo) => {
+    photo.style.cursor = "zoom-in";
+
+    photo.addEventListener("click", () => {
+      lightboxPhoto.src = photo.src;
+      lightboxPhoto.alt = photo.alt;
+      lightbox.classList.add("show");
+      lightbox.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  function closeImage() {
+    lightbox.classList.remove("show");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxPhoto.src = "";
+  }
+
+  closeLightbox.addEventListener("click", closeImage);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeImage();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeImage();
+  });
+</script>
 </body>
 </html>
